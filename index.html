@@ -1,0 +1,304 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  <title>Soft UI Nav</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .dashboard {
+  background-color: rgb(240, 240, 240);
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.navbar-vertical {
+  position: fixed;
+  width: 100%;
+  max-width: 15.625rem!important;
+  background-color: white;
+  box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+  border-radius: 1rem;
+  padding: 0;
+  margin: 1rem!important;
+  border-width: 0!important;
+}
+.sidenav-header {
+  height: 4.875rem;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+.close-icon {
+  position: absolute;
+  padding: 1rem!important;
+  opacity: .5!important;
+  color: #8392ab!important;
+  font-weight: 900;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.navbar-brand {
+  padding: 1.5rem 2rem;
+  display: block;
+  margin: 0!important;
+  box-sizing: border-box;
+  cursor: pointer;
+  widows: 100%;
+  height: 100%;
+}
+.hero-img {
+  box-sizing: border-box;
+  widows: 100%;
+  height: 100%;
+}
+.horizontal-gradient {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-weight: 400;
+  line-height: 1.6;
+  box-sizing: border-box;
+  margin: 1rem 0;
+  color: inherit;
+  border: 0;
+  opacity: .25;
+  margin-top: 0!important;
+  height: 1px;
+  background-color: transparent;
+  background-image: linear-gradient(90deg,transparent,rgba(0,0,0,.4),transparent);
+}
+.nav-content {
+  display: block;
+  overflow: auto;
+  height: calc(100vh - 360px);
+  position: relative;
+}
+.nav-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+.nav-item {
+  margin-top: .125rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  list-style: none;
+}
+.nav-link {
+  color: #252f40;
+  background-color: #fff;
+  box-shadow: none;
+  font-weight: 600;
+  border-radius: .5rem;
+  padding-top: .675rem;
+  padding-bottom: .675rem;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: .875rem;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.icon-holder {
+  background-image: linear-gradient(310deg,#e9ecef,#e9ecef);
+  text-align: center!important;
+  border-radius: .5rem;
+  width: 32px;
+  height: 32px;
+  background-position: 50%;
+  background-color: #fff!important;
+  margin-right: .5rem!important;
+  align-items: center!important;
+  justify-content: center!important;
+  box-shadow: 0 .25rem .375rem -.0625rem hsla(0,0%,8%,.12),
+  0 .125rem .25rem -.0625rem hsla(0,0%,8%,.07)!important;
+  display: flex!important;
+  box-sizing: border-box;
+}
+.nav-link-active .icon-holder {
+  background-image: linear-gradient(310deg,#cb0c9f,#cb0c9f);
+}
+.nav-link-text {
+  font-weight: 500;
+  color: #67748e;
+  font-size: .875rem;
+}
+.nav-link-active .nav-link-text {
+  margin-left: .25rem!important;
+  box-sizing: border-box;
+  color: #252f40;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: .925rem;
+  letter-spacing: -.025rem;
+}
+.nav-divider {
+  opacity: .6!important;
+  font-weight: 700!important;
+  text-transform: uppercase!important;
+  font-size: .825rem!important;
+  line-height: 1.25;
+  padding-left: 1.5rem!important;
+  margin-left: .5rem!important;
+  color: #252f40;
+}
+.side-nav-footer {
+  padding-top: 1rem!important;
+  margin-top: 1rem!important;
+  margin-bottom: 1.5rem!important;
+  margin-left: 1rem!important;
+  margin-right: 1rem!important;
+  box-sizing: border-box;
+  display: block;
+}
+.nav-card {
+  align-items: center;
+  box-shadow: none!important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0,0,0,.125);
+  border-radius: 1rem;
+  background-image: linear-gradient(310deg,#627594,#a8b8d8);
+  padding: 0.875rem;
+}
+.nav-card-body {
+  width: 100%!important;
+  margin: 0;
+  padding: 0;
+}
+.nav-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: .5rem;
+  text-align: center!important;
+  background-color: #fff!important;
+  margin-bottom: 1rem!important;
+  align-items: center!important;
+  justify-content: center!important;
+  box-shadow: 0 .25rem .375rem -.0625rem hsla(0,0%,8%,.12),
+  0 .125rem .25rem -.0625rem hsla(0,0%,8%,.07)!important;
+  display: flex!important;
+}
+.text-small {
+  color: white;
+  font-size: 0.9rem;
+}
+.nav-btn {
+  width: 100%!important;
+  border: 0;
+  letter-spacing: -.025rem;
+  box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
+  background-size: 150%;
+  background-position-x: 25%;
+  text-transform: uppercase;
+  margin-bottom: 0!important;
+  padding: .5rem 2rem;
+  font-size: .75rem;
+  color: #000;
+  background-color: #fff;
+  border-radius: .5rem;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.nav-btn:hover {
+  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 9%), 0 2px 3px -1px rgb(0 0 0 / 7%);
+  transform: scale(1.02);
+}
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="navbar-vertical">
+      <div class="sidenav-header">
+        <i class="close-icon fas fa-times p-3 cursor-pointer position-absolute right-0 top-0"></i>
+        <a href="/" class="navbar-brand">
+        <img
+          src="segmindLogo.svg"
+          style="max-width: '150px"
+          class="hero-img align-center text-center center-text"
+        />
+        </a>
+      </div>
+      <hr class="horizontal-gradient">
+      <div class="nav-content">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/" class="nav-link nav-link-active">
+              <div class="icon-holder">
+                <img :src="dashboard" width="">
+              </div>
+              <span class="nav-link-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/" class="nav-link">
+              <div class="icon-holder">
+                <img :src="dashboard" width="">
+              </div>
+              <span class="nav-link-text">Projects</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/" class="nav-link">
+              <div class="icon-holder">
+                <img :src="dashboard" width="">
+              </div>
+              <span class="nav-link-text">Notebooks</span>
+            </a>
+          </li>
+          <li class="nav-item mt-3">
+            <h6 class="nav-divider">
+              Account pages
+            </h6>
+          </li>
+          <li class="nav-item">
+            <a href="/" class="nav-link">
+              <div class="icon-holder">
+                <img :src="dashboard" width="">
+              </div>
+              <span class="nav-link-text">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="side-nav-footer">
+        <div class="nav-card">
+          <div class="nav-card-body">
+            <div class="nav-icon">
+              <i class="ni ni-diamond text-dark text-gradient text-lg top-0"></i>
+            </div>
+            <div class="docs-info">
+            <h6 class="text-white up mb-0">Need help?</h6>
+            <p class="text-small">Please check our docs</p>
+            <button class="nav-btn">Documentation</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
